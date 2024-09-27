@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Include the same header navigation -->
+    <header>
+        <nav>
+            <!-- Same navigation menu -->
+        </nav>
+        <h1>Contact Me</h1>
+    </header>
+    <main>
+        <section>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <!-- reCAPTCHA or any other anti-spam measures -->
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+        
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Your Name</p>
+    </footer>
+</body>
+</html>
