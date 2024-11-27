@@ -70,7 +70,6 @@ nav a.active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Rest of your existing CSS styles */
 /* Main Content */
 main {
     max-width: 1200px;
@@ -78,12 +77,6 @@ main {
     padding: 0 2rem;
     position: relative;
     z-index: 1;
-}
-
-@media (min-width: 968px) {
-    .blog-layout {
-        grid-template-columns: 2fr 1fr;
-    }
 }
 
 section {
@@ -94,4 +87,122 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Your existing styles below this line remain unchanged */
+h2 {
+    color: #764ba2;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Focus Grid */
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.focus-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.focus-item:hover {
+    transform: translateY(-5px);
+}
+
+.focus-item ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.focus-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Project Cards */
+.project-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+.project-goals {
+    margin-top: 1.5rem;
+}
+
+.project-goals h4 {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.project-goals ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.project-goals li {
+    padding: 0.3rem 0;
+    position: relative;
+}
+
+.project-goals li:before {
+    content: '•';
+    color: #764ba2;
+    position: absolute;
+    left: -1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+    }
+
+    header {
+        padding: 1rem 1rem 3rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+}
