@@ -2,37 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog | Your Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Jason Thomas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Include the same header navigation -->
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech.html">Tech Projects</a></li>
-                <li><a href="non-tech.html">Non-Tech Work</a></li>
+                <li><a href="creative.html">Creative Work</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <h1>Blog</h1>
+        <p>Thoughts on Tech, Photography, and Music</p>
     </header>
     <main>
-        <section>
-            <article>
-                <h2>Blog Post Title</h2>
-                <p><em>Date</em></p>
-                <p>[Content of the blog post.]</p>
-                <p><strong>Tags:</strong> <a href="tag.html">Hiking</a>, <a href="tag.html">Travel</a></p>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="/api/placeholder/800/400" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">March 15, 2024</span>
+                        <span class="post-category">Photography</span>
+                    </div>
+                    <h2>Finding the Perfect Shot: A Journey Through Remote Landscapes</h2>
+                    <p class="post-excerpt">Exploring the challenges and rewards of hiking to capture unique landscape photographs, and how the journey often becomes part of the story behind the image.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
             </article>
-            <!-- Repeat for other blog posts -->
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="/api/placeholder/800/400" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">March 10, 2024</span>
+                        <span class="post-category">Tech</span>
+                    </div>
+                    <h2>Integrating AI into Everyday Workflows</h2>
+                    <p class="post-excerpt">Exploring practical applications of AI tools and how they can enhance productivity while maintaining a balance with human decision-making.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="/api/placeholder/800/400" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">March 5, 2024</span>
+                        <span class="post-category">Music</span>
+                    </div>
+                    <h2>The Joy of Learning Multiple Instruments</h2>
+                    <p class="post-excerpt">Reflecting on the experience of playing different instruments and how each one brings a unique perspective to musical understanding.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="blog-sidebar">
+            <div class="categories-widget">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li><a href="#">Photography (5)</a></li>
+                    <li><a href="#">Technology (3)</a></li>
+                    <li><a href="#">Music (4)</a></li>
+                    <li><a href="#">Development (2)</a></li>
+                </ul>
+            </div>
+
+            <div class="recent-posts-widget">
+                <h3>Recent Posts</h3>
+                <ul class="recent-posts-list">
+                    <li>
+                        <a href="#">Finding the Perfect Shot</a>
+                        <span class="post-date">March 15, 2024</span>
+                    </li>
+                    <li>
+                        <a href="#">Integrating AI into Everyday Workflows</a>
+                        <span class="post-date">March 10, 2024</span>
+                    </li>
+                    <li>
+                        <a href="#">The Joy of Learning Multiple Instruments</a>
+                        <span class="post-date">March 5, 2024</span>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Jason Thomas</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Jason Thomas</p>
     </footer>
 </body>
 </html>
