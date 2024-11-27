@@ -2,13 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | Your Name</title>
+    <title>Contact | Jason Thomas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background: #764ba2;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #667eea;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: #764ba2;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <!-- Include the same header navigation -->
     <header>
         <nav>
             <ul>
@@ -18,16 +74,33 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            </ul>
         </nav>
         <h1>Contact Me</h1>
+        <p>Get in touch for collaborations or questions</p>
     </header>
     <main>
-        <section style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; background-color: #1f1f1f; color: #e0e0e0; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #ffffff;">Contact Information</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #b0b0b0;">If you would like to get in touch, please contact me at:</p>
-            <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; color: #ffffff;">Jason Thomas</p>
-            <p style="font-size: 1.2rem; color: #b0b0b0;">Email: <a href="mailto:me@jasons.pics" style="color: #4caf50; text-decoration: none;">me@jasons.pics</a></p>
+        <section>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/soggydelimeats" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            </div>
         </section>
     </main>
     <footer>
