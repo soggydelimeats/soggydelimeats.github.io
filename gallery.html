@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Jason Thomas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech.html">Tech Projects</a></li>
+                <li><a href="creative.html">Creative Work</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Photo Gallery</h1>
+        <p>Landscapes • Events • Portraits</p>
+    </header>
+    <main>
+        <section class="gallery-controls">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="landscape">Landscapes</button>
+                <button class="filter-btn" data-category="event">Events</button>
+                <button class="filter-btn" data-category="portrait">Portraits</button>
+            </div>
+        </section>
+        <section class="photo-gallery">
+            <!-- Note: Replace these placeholder images with your actual photos -->
+            <div class="gallery-item" data-category="landscape">
+                <img src="/api/placeholder/800/600" alt="Landscape Photo 1">
+                <div class="gallery-item-info">
+                    <h3>Mountain Vista</h3>
+                    <p>Captured during a long-distance hike</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="landscape">
+                <img src="/api/placeholder/800/600" alt="Landscape Photo 2">
+                <div class="gallery-item-info">
+                    <h3>Forest Trail</h3>
+                    <p>Early morning light through the trees</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="event">
+                <img src="/api/placeholder/800/600" alt="Event Photo 1">
+                <div class="gallery-item-info">
+                    <h3>Public Gathering</h3>
+                    <p>Documenting important moments</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="event">
+                <img src="/api/placeholder/800/600" alt="Event Photo 2">
+                <div class="gallery-item-info">
+                    <h3>Campaign Rally</h3>
+                    <p>Political event coverage</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="/api/placeholder/800/600" alt="Portrait Photo 1">
+                <div class="gallery-item-info">
+                    <h3>Professional Portrait</h3>
+                    <p>Corporate headshot session</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="/api/placeholder/800/600" alt="Portrait Photo 2">
+                <div class="gallery-item-info">
+                    <h3>Environmental Portrait</h3>
+                    <p>Natural light composition</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Jason Thomas</p>
+    </footer>
+
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const category = button.getAttribute('data-category');
+
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
