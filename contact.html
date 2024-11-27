@@ -2,67 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jason Thomas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <style>
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #666;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        button {
-            background: #764ba2;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #667eea;
-        }
-
-        .social-links {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .social-links a {
-            color: #764ba2;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -70,41 +13,74 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech.html">Tech Projects</a></li>
-                <li><a href="non-tech.html">Non-Tech Work</a></li>
+                <li><a href="creative.html">Creative Work</a></li>
+                <li><a href="gallery.html">Photo Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <h1>Contact Me</h1>
-        <p>Get in touch for collaborations or questions</p>
+        <p>Let's Connect</p>
     </header>
-    <main>
-        <section>
+    <main class="contact-layout">
+        <section class="contact-info">
+            <div class="contact-text">
+                <h2>Get In Touch</h2>
+                <p>I'm interested in collaborating on projects, sharing photography insights, or discussing tech innovations. Feel free to reach out!</p>
+            </div>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form action="#" method="POST" id="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required class="form-input">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" class="form-input">
+                            <option value="collaboration">Collaboration</option>
+                            <option value="photography">Photography</option>
+                            <option value="tech">Tech Projects</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required class="form-input" rows="6"></textarea>
                     </div>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
+        </section>
+        <section class="connect-section">
+            <h2>Connect Online</h2>
             <div class="social-links">
-                <a href="https://github.com/soggydelimeats" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="https://github.com/soggydelimeats" target="_blank" class="social-link">
+                    <span class="social-icon">GitHub</span>
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <span class="social-icon">LinkedIn</span>
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <span class="social-icon">Instagram</span>
+                </a>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Jason Thomas</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Jason Thomas</p>
     </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
