@@ -25,6 +25,11 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 /* Navigation */
 nav {
     background: rgba(0, 0, 0, 0.1);
@@ -67,40 +72,53 @@ section {
 
 h2 {
     color: #764ba2;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #555;
     margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
-/* Gallery */
-.gallery {
+/* About Section */
+.about p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Areas of Focus Grid */
+.focus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-.gallery-item {
-    background: white;
+.focus-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
     border-radius: 8px;
-    overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
+.focus-item:hover {
     transform: translateY(-5px);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.focus-item ul {
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.gallery-item a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    color: #333;
-    text-decoration: none;
+.focus-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.focus-item li:last-child {
+    border-bottom: none;
 }
 
 /* Footer */
@@ -124,7 +142,11 @@ footer {
         padding: 2rem 1rem;
     }
 
-    .gallery {
+    .focus-grid {
         grid-template-columns: 1fr;
+    }
+
+    .focus-item {
+        margin-bottom: 1rem;
     }
 }
