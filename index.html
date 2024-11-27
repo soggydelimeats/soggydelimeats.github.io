@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Name | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Thomas | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -12,33 +13,55 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech.html">Tech Projects</a></li>
-                <li><a href="non-tech.html">Non-Tech Work</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="creative.html">Creative Work</a></li>
+                <li><a href="legal.html">Legal Practice</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <h1>Jason Thomas</h1>
-        <p>Welcome to my portfolio website!</p>
+        <p>Attorney • Developer • Creative</p>
     </header>
     <main>
-        <section>
+        <section class="about">
             <h2>About Me</h2>
-            <p>Currently lazily building this portfolio site to include all of my projects and things.</p>
+            <p>I am an attorney practicing municipal law in New York State, with a focus on land use, planning and zoning, and minor criminal prosecution. Beyond my legal practice, I pursue a diverse range of creative and technical interests.</p>
+            <p>As a multi-instrumentalist, I play blues guitar, bass, harmonica, banjo, mandolin, and ukulele. My photography work spans from capturing landscapes to documenting special events, while my programming projects focus on creating practical LLM-integrated tools.</p>
         </section>
-        <section>
-            <h2>Featured Projects</h2>
-            <div class="gallery">
-                <!-- Add thumbnails of your featured projects -->
-                <div class="gallery-item">
-                    <img src="images/project1.jpg" alt="Project 1">
-                    <a href="tech.html">Project 1</a>
+        <section class="areas">
+            <h2>Areas of Focus</h2>
+            <div class="focus-grid">
+                <div class="focus-item">
+                    <h3>Legal Practice</h3>
+                    <ul>
+                        <li>Municipal Law</li>
+                        <li>Land Use & Zoning</li>
+                        <li>Planning</li>
+                        <li>Criminal Prosecution</li>
+                    </ul>
                 </div>
-                <!-- Repeat for other projects -->
+                <div class="focus-item">
+                    <h3>Creative Work</h3>
+                    <ul>
+                        <li>Event Photography</li>
+                        <li>Landscape Photography</li>
+                        <li>Portrait Photography</li>
+                        <li>Blues Guitar & Multi-Instrumental Music</li>
+                    </ul>
+                </div>
+                <div class="focus-item">
+                    <h3>Tech Projects</h3>
+                    <ul>
+                        <li>LLM Integration Tools</li>
+                        <li>Legal Tech Development</li>
+                        <li>Workflow Automation</li>
+                        <li>Custom Software Solutions</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Jason Thomas</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Jason Thomas</p>
     </footer>
 </body>
 </html>
